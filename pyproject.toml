@@ -1,0 +1,26 @@
+[project]
+name = "berlin-events-tracker"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ben.glaeser",email = "ben.glaeser@tuta.io"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests (>=2.32.4,<3.0.0)",
+    "beautifulsoup4 (>=4.13.4,<5.0.0)",
+    "python-dateutil (>=2.9.0.post0,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)"
+]
+
+[tool.poetry.scripts]
+berlin-events = "berlin_events_tracker.main:run"
+
+[tool.poetry]
+packages = [{include = "berlin_events_tracker", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
