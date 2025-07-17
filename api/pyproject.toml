@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "events-bot-api"
+version = "0.1.0"
+description = "Monorepo FastAPI service"
+authors = ["Ben Glaeser <ben.glaeser@tuta.io>"]
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95"
+uvicorn = { extras = ["standard"], version = "^0.22" }
+SQLAlchemy = "^1.4"
+asyncpg = "^0.27"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

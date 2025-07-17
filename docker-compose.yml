@@ -1,0 +1,9 @@
+services:
+  api:
+    build:
+      context: ./api
+    container_name: fastapi_api
+    ports:
+      - "8000:8000"
+    # (optional) restart policy:
+    restart: unless-stopped
